@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@import 'tailwind-scrollbar-hide/v4';
-
+/* @import 'tailwind-scrollbar-hide/v4'; */
+@plugin "tailwind-scrollbar-hide";
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
