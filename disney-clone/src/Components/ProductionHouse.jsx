@@ -13,7 +13,7 @@ import pixarV from '../assets/Videos/pixar.mp4'
 
 
 
-export const ProductionHouse = () => {
+function ProductionHouse () {
 
     const productionHouseList = [
     {

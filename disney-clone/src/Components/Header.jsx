@@ -10,36 +10,35 @@ import {
 import { HiPlus, HiDotsVertical } from "react-icons/hi";
 import HeaderItem from "./HeaderItem";
 
-const Header = () => {
-  const [toggle,setToggle]=useState(false);
 
-  const menu = [
-    {
-      name: "HOME",
-      icon: HiHome,
-    },
-    {
-      name: "SEARCH",
-      icon: HiMagnifyingGlass,
-    },
-    {
-      name: "WATCH LIST",
-      icon: HiPlus,
-    },
-    {
-      name: "ORIGINALS",
-      icon: HiStar,
-    },
-    {
-      name: "MOVIES",
-      icon: HiPlayCircle,
-    },
-    {
-      name: "SERIES",
-      icon: HiTv,
-    },
-  ];
-
+function Header() {
+    const [toggle,setToggle]=useState(false);
+    const menu=[
+        {
+            name:'HOME',
+            icon:HiHome
+        },
+        {
+            name:'SEARCH',
+            icon:HiMagnifyingGlass
+        },
+        {
+            name:'WATCH LIST',
+            icon:HiPlus
+        },
+        {
+            name:'ORIGINALS',
+            icon:HiStar
+        },
+        {
+            name:'MOVIES',
+            icon:HiPlayCircle
+        },
+        {
+            name:'SERIES',
+            icon:HiTv
+        }
+    ]
   return (
     <div className='flex items-center justify-between p-5'>
         <div className='flex  gap-8 items-center'>
@@ -54,7 +53,6 @@ const Header = () => {
         {menu.map((item,index)=>index<3&&(
             <HeaderItem name={''} Icon={item.icon} />
         ))}
-        
          <div className='md:hidden' onClick={()=>setToggle(!toggle)}>       
             <HeaderItem name={''} Icon={HiDotsVertical} />
            {toggle? <div className='absolute mt-3 bg-[#121212] 
@@ -70,6 +68,6 @@ const Header = () => {
         className='w-[40px] rounded-full'/>
     </div>
   )
-};
+}
 
-export default Header;
+export default Header
